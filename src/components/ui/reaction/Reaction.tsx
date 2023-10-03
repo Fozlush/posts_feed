@@ -15,9 +15,9 @@ interface IReaction {
 
 const Reaction: FC<IReaction> = ({id}) => {
   const dispatch = useDispatch()
-  const [likes, setLikes] = useState(useSelector((state:RootState) => state.likes.likes.find((element) => element.id === id).likes))
-  const [dislikes, setDislikes] = useState(useSelector((state:RootState) => state.likes.likes.find((element) => element.id === id).dislikes))
-  const [status, setStatus] = useState(useSelector((state:RootState) => state.likes.likes.find((element) => element.id === id).status))
+  const [likes, setLikes] = useState(useSelector((state:RootState) => state.likes.likes.find((element) => element.id === id)!.likes))
+  const [dislikes, setDislikes] = useState(useSelector((state:RootState) => state.likes.likes.find((element) => element.id === id)!.dislikes))
+  const [status, setStatus] = useState(useSelector((state:RootState) => state.likes.likes.find((element) => element.id === id)!.status))
 
   function pressLike(){
     switch(status){
