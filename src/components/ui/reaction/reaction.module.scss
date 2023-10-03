@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  div {
+    display: flex;
+    align-items: center;
+  }
+  button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+
+.dislikes {
+  margin-left: 24px;
+}
+
+.count {
+  margin-left: 8px;
+}
